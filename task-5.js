@@ -23,7 +23,7 @@ let cost = 0;
 
 const userCountry = prompt('Введите страну доставки');
 let country = userCountry[0].toUpperCase() + userCountry.slice(1).toLowerCase();
-let message = (`Доставка в ${country} будет стоить ${cost} кредитов`)
+let message;
 if (userCountry === null) {
   alert('Отменено пользователем')
 } 
@@ -31,29 +31,29 @@ else {
   switch (country) {
     case "china":
       cost = 100;
-      message 
+      message = `Доставка в ${country} будет стоить ${cost} кредитов`;
       break;
 
     case "chili":
       cost = 250;
-      message 
+      message = `Доставка в ${country} будет стоить ${cost} кредитов`;
       break;
 
     case "australia":
       cost = 170;
-      message 
+      message = `Доставка в ${country} будет стоить ${cost} кредитов`;
       break;
     case "india":
       cost = 80;
-      message
+      message = `Доставка в ${country} будет стоить ${cost} кредитов`
       break;
     case "jamaica":
       cost = 120;
-      message 
+      message = `Доставка в ${country} будет стоить ${cost} кредитов`
       break;
     
     default:
-      alert('В вашей стране доставка не доступна');
+      message = 'В вашей стране доставка не доступна';
   }
-  alert(message)
 }
+  alert(message)
